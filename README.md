@@ -16,7 +16,9 @@ A web interface that connects with the database of XtreamCodes 2.9 for resellers
 
 ## How to install
 
-Use Ubuntu 18.04 with PHP 7.2 and apache. Just put the files into `/var/html/www` and put your database settings into `/sys/config.php`
+Use Ubuntu 18.04 with PHP 7.2 and apache. Just put the files into `/var/html/www` and put your database settings into `/sys/config.php`.
+
+You have to use the .sql files in /db to create a database for resellers panel and then add it to the `config.php`
 
 ## Known Issues
 
