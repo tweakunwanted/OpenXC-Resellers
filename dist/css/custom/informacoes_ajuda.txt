@@ -1,0 +1,1 @@
+Você pode criar arquivos css com esta sintaxe: FILENAME_style.css, exemplo: create_client_style.css ou index_style.css, para injetar arquivos css em páginas separadas!
