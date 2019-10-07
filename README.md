@@ -1,4 +1,4 @@
-# XtreamCodes 2.9 Resellers UI
+# OpenXC Resellers UI (not ready yet to be used!)
 
 ## What is this?
 
