@@ -1,4 +1,4 @@
-# OpenXC Resellers UI (not ready yet to be used!)
+# OpenXC Resellers UI (No installation script yet)
 
 ## What is this?
 
