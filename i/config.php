@@ -1,5 +1,5 @@
 <?php
-// Hostname for your URL shortener
+// Domain to use for short links
 $hostname = 'http://atalho.top';
 
 // PDO connection to the database
