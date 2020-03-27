@@ -135,6 +135,10 @@ if (isset($_SESSION["__l0gg3d_us3r__"]) && isset($_GET["action"])) {
                 $reseller_id = intval($_GET["reseller_id"]);
                 $credits = intval($_GET["credits"]);
                 $logged_user = getLoggedUser();
+                $reseller = getUserByID($reseller_id);
+                if ($credits < 0 && abs($reseller["credits"]) < abs($credits)) {
+                    $credits = $reseller["credits"];
+                }
                 if ($logged_user && masterHasPermission($logged_user_id, $reseller_id) && addOrRemoveCredits($logged_user_id, 0 - $credits) && addOrRemoveCredits($reseller_id, $credits)) {
                     insertCreditsLog($reseller_id, $logged_user_id, $credits, "");
                     $result["result"] = "success";
